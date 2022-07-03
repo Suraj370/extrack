@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 import './models/transaction.dart';
@@ -163,18 +165,21 @@ class CategoryInfo extends StatelessWidget {
                   child: Container(
                     width: 20,
                     height: 20, 
+                    child: Image.asset(
+                      "assets/images/$type.png",
+                    )
+                    
                   ),
                 ),
                 height: 40,
                 width: 40,
+                
                 decoration: BoxDecoration(
                   color: Color(0xFFD9D9D9),
                   borderRadius: BorderRadius.circular(10),
-                   image: DecorationImage(
-                    image: AssetImage('assets/assets/${type}.jpg'),
-                    fit: BoxFit.fill,
-                   )
+                  
                 ),
+                
               ),
               SizedBox(
                 width: 15,
